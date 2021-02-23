@@ -1,0 +1,142 @@
+#pragma once
+
+namespace firts_app {
+
+	using namespace System;
+	using namespace System::ComponentModel;
+	using namespace System::Collections;
+	using namespace System::Windows::Forms;
+	using namespace System::Data;
+	using namespace System::Drawing;
+
+	/// <summary>
+	/// Summary for Form1
+	/// </summary>
+	public ref class Form1 : public System::Windows::Forms::Form
+	{
+	public:
+		Form1(void)
+		{
+			InitializeComponent();
+			//
+			//TODO: Add the constructor code here
+			//
+		}
+
+	protected:
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		~Form1()
+		{
+			if (components)
+			{
+				delete components;
+			}
+		}
+	private: System::Windows::Forms::Label^  lblHola;
+	private: System::Windows::Forms::LinkLabel^  lnklabelDerechos;
+	private: System::Windows::Forms::Button^  btnHola;
+	private: System::Windows::Forms::TextBox^  txtMensaje;
+
+
+
+	protected: 
+
+
+	protected: 
+
+	private:
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		System::ComponentModel::Container ^components;
+
+#pragma region Windows Form Designer generated code
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		void InitializeComponent(void)
+		{
+			this->lblHola = (gcnew System::Windows::Forms::Label());
+			this->lnklabelDerechos = (gcnew System::Windows::Forms::LinkLabel());
+			this->btnHola = (gcnew System::Windows::Forms::Button());
+			this->txtMensaje = (gcnew System::Windows::Forms::TextBox());
+			this->SuspendLayout();
+			// 
+			// lblHola
+			// 
+			this->lblHola->AutoSize = true;
+			this->lblHola->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lblHola->ForeColor = System::Drawing::Color::Navy;
+			this->lblHola->Location = System::Drawing::Point(121, 91);
+			this->lblHola->Name = L"lblHola";
+			this->lblHola->Size = System::Drawing::Size(228, 44);
+			this->lblHola->TabIndex = 0;
+			this->lblHola->Text = L"Hola Mundo";
+			this->lblHola->Click += gcnew System::EventHandler(this, &Form1::label1_Click);
+			// 
+			// lnklabelDerechos
+			// 
+			this->lnklabelDerechos->AutoSize = true;
+			this->lnklabelDerechos->Location = System::Drawing::Point(182, 398);
+			this->lnklabelDerechos->Name = L"lnklabelDerechos";
+			this->lnklabelDerechos->Size = System::Drawing::Size(301, 17);
+			this->lnklabelDerechos->TabIndex = 1;
+			this->lnklabelDerechos->TabStop = true;
+			this->lnklabelDerechos->Text = L"Ricardo Asin - Todos los derechos reservados";
+			this->lnklabelDerechos->TextAlign = System::Drawing::ContentAlignment::BottomRight;
+			this->lnklabelDerechos->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &Form1::linkLabel1_LinkClicked);
+			// 
+			// btnHola
+			// 
+			this->btnHola->Location = System::Drawing::Point(129, 206);
+			this->btnHola->Name = L"btnHola";
+			this->btnHola->Size = System::Drawing::Size(200, 56);
+			this->btnHola->TabIndex = 2;
+			this->btnHola->Text = L"Mensaje";
+			this->btnHola->UseVisualStyleBackColor = true;
+			this->btnHola->Click += gcnew System::EventHandler(this, &Form1::button1_Click_1);
+			// 
+			// txtMensaje
+			// 
+			this->txtMensaje->Location = System::Drawing::Point(127, 156);
+			this->txtMensaje->Name = L"txtMensaje";
+			this->txtMensaje->Size = System::Drawing::Size(201, 22);
+			this->txtMensaje->TabIndex = 3;
+			this->txtMensaje->Text = L"Aqui va a salir tu mensaje";
+			// 
+			// Form1
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::Window;
+			this->ClientSize = System::Drawing::Size(495, 424);
+			this->Controls->Add(this->txtMensaje);
+			this->Controls->Add(this->btnHola);
+			this->Controls->Add(this->lnklabelDerechos);
+			this->Controls->Add(this->lblHola);
+			this->Name = L"Form1";
+			this->Text = L"Form1";
+			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
+		}
+#pragma endregion
+	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
+			 }
+	private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 }
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 }
+	private: System::Void linkLabel1_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
+			 }
+	private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
+				 txtMensaje -> Text="Hola Mundo";
+				 
+			 }
+};
+}
