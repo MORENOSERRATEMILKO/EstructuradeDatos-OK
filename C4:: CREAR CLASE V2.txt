@@ -1,0 +1,25 @@
+1. Abrir el visual cpp
+
+2. Creamos el proyecto
+
+3. Se agrega la clase, barra de tareas "Project>Add Class"
+
+4. Seleccionar "C++ Class" 
+
+5. Se coloca nombre a la clase y despues "Finish"
+
+6. En el header de la clase Nombredelaclase.h y empezamos a asignar los atributos dentro del PRIVATE y los metodos dentro de PUBLIC 
+
+7. Nos dirigimos a Nmbredelaclase.cpp incluimos el header de nuestra clase
+
+8. Desarrollamos los metodos y las funciones que hicimos dentro de Nombredelaclase.h 
+
+9. Dentro de form1.h (design) y hacemos doble click en el boton de calcular creado previamente 
+
+10. Una vez dentro del apartado form.h se define las bliotecas 
+	10.1 	#include <iostream> 
+		#include <msclr\marshal_cppstd.h> 
+
+11. Asignamos el uso del espacio (using namespace std y msclr)
+
+12. Dentro del boton llamamos a la clase y creamos el objeto para que sea programado
